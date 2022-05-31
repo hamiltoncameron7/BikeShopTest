@@ -40,12 +40,12 @@ npm start
 All new code is in index.js
 The functions for Requirements 1, 2 and 3 are outlined with comments
 
-####Find all data
+#### Find all data
 ```
 findDataFromId(station_id)
 ``` 
 This will search through the station_information.json and return all data in the object with station_id
-####Get age groups
+#### Get age groups
 ```
 getAgeGroupsFromEndingIDs([array of Station IDs])
 ```
@@ -54,7 +54,7 @@ This will read through the massive DivvyTrips.csv file and save to/return global
 tripsSepByAge['0-20'][0] 
 ```
 This would return the first object (trip) in the 0-20 age range array
-####Get last twenty rides
+#### Get last twenty rides
 ```
 getLastTwentyRides([array of Station IDs])
 ```
