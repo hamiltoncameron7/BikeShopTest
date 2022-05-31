@@ -39,9 +39,28 @@ npm start
 
 All new code is in index.js
 The functions for Requirements 1, 2 and 3 are outlined with comments
-*findDataFromId(station_id) will search through the station_information.json and return all data in the object with station_id
-*getAgeGroupsFromEndingIDs([array of Station IDs]) will read through the massive DivvyTrips.csv file and save to/return global object tripsSepByAge, which contains an array for each age group. For example: tripsSepByAge['0-20'][0] this would return the first object (trip) in the 0-20 age range array
-*getLastTwentyRides([array of Station IDs]) will read through the massive DivvyTrips.csv file, save out all trips that end at any of the station IDs provided to their own array housed in the object allAtEndStation[station ID]. Then, this array is sorted by trip end time, and output into lastTwentyRides[station ID]. Finally, these arrays are logged to the console. I did not get around to checking these for a single day, but if I were to add that, I would pass the day in as an input to the overall function, and use it in an if statement inside the readStream2 in order to only grab trips from that day, something like this: 
+
+####Find all data
+```
+findDataFromId(station_id)
+``` 
+This will search through the station_information.json and return all data in the object with station_id
+####Get age groups
+```
+getAgeGroupsFromEndingIDs([array of Station IDs])
+```
+This will read through the massive DivvyTrips.csv file and save to/return global object tripsSepByAge, which contains an array for each age group. For example: 
+```
+tripsSepByAge['0-20'][0] 
+```
+This would return the first object (trip) in the 0-20 age range array
+####Get last twenty rides
+```
+getLastTwentyRides([array of Station IDs])
+```
+This will read through the massive DivvyTrips.csv file, save out all trips that end at any of the station IDs provided to their own array housed in the object allAtEndStation[station ID]. Then, this array is sorted by trip end time, and output into lastTwentyRides[station ID]. Finally, these arrays are logged to the console.
+
+I did not get around to checking these for a single day, but if I were to add that, I would pass the day in as an input to the overall function, and use it in an if statement inside the readStream2 in order to only grab trips from that day, something like this: 
 ```
 function(EndIDInputs2, inputDate){
 
