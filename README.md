@@ -35,7 +35,7 @@ OR
 npm start
 
 ```
-### General Notes
+## General Notes
 
 All new code is in index.js
 The functions for Requirements 1, 2 and 3 are outlined with comments
